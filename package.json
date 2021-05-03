@@ -1,0 +1,73 @@
+{
+  "name": "mobiledjac",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "electron": "^7.0.1",
+    "electron-builder": "^22.1.0"
+  },
+  "dependencies": {
+    "Blob": "^0.10.0",
+    "alert-node": "^3.0.10",
+    "axios": "^0.19.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "document": "^0.4.7",
+    "electron-builder": "^22.1.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "html-webpack-plugin": "^4.3.0",
+    "http": "0.0.0",
+    "jquery": "^3.5.1",
+    "js-alert": "^1.0.4",
+    "jsdom": "^15.2.1",
+    "moment": "^2.24.0",
+    "mssql": "^6.0.1",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "prettier": "^1.19.1",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-bootstrap-table-next": "^3.2.1",
+    "react-bootstrap-table2-editor": "^1.4.0",
+    "react-bootstrap-table2-paginator": "^2.1.0",
+    "react-bootstrap-table2-toolkit": "^2.1.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.3",
+    "url": "^0.11.0",
+    "util": "^0.12.1",
+    "wait-on": "^3.3.0",
+    "window": "^4.2.6"
+  },
+  "main": "src/electron-starter.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "npm run electron-build -c.extraMetadata.main=src/electron-starter.js",
+    "electron-build": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
