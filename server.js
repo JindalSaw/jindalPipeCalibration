@@ -18,12 +18,7 @@ var config = {
   user: "jsudjac",
   password: "$#jsuapple",
   server: "10.1.4.125",
-<<<<<<< HEAD
-  database: "QCDB"
-=======
-  database: "QCDB",
-  // database: "SLDP_Calibration_test",
->>>>>>> dfe11ed7c00b22f8eb645336665ddfe0885a738a
+  database: "JPUMILL-Calibration",
 };
 
 const dbconn = sql.connect(config, (err) => {
@@ -81,15 +76,7 @@ app.get("/validateUser/:userName/:password", (req, res) => {
   });
 });
 
-<<<<<<< HEAD
 app.get("/getInActiveDetails", (req, res) => {
-=======
-// app.get("/*", function(request, response) {
-//   response.sendFile(path.join(__dirname, "build", "index.html"));
-// });
-
-app.get("/production", (req, res) => {
->>>>>>> dfe11ed7c00b22f8eb645336665ddfe0885a738a
   console.log("get summary details loaded");
 
   dbconn.query("exec inActiveGrid", (err, rows, fields) => {
@@ -186,6 +173,7 @@ app.post("/instrumentRemoval/:id_no", function(req, res) {
   for (let index = 0; index <= ids.length - 1; index++) {
     const request = new sql.Request(dbconn);
     request.input("idno", sql.VarChar, ids[index]);
+    // eslint-disable-next-line no-loop-func
     request.execute("instrument_removal2", (err, result) => {
       if (!err) {
         deleted = true;
@@ -248,7 +236,6 @@ app.post("/updateCalibrationFile", upload, function(req, res) {
   });
 });
 
-
 app.get("/production", (req, res) => {
   console.log("get summary details loaded...");
 
@@ -258,20 +245,6 @@ app.get("/production", (req, res) => {
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.get("/getInstrumentFile/:id", function(req, res) {
   console.log("start", req.params.id);
@@ -302,11 +275,6 @@ app.delete(
   }
 );
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> dfe11ed7c00b22f8eb645336665ddfe0885a738a
 app.post("/activateInstrumentById/:idNo", (req, res) => {
   const request = new sql.Request(dbconn);
   let query =
@@ -322,10 +290,6 @@ app.post("/activateInstrumentById/:idNo", (req, res) => {
   });
 });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dfe11ed7c00b22f8eb645336665ddfe0885a738a
 app.post("/addCalibrationData", upload, (req, res) => {
   let instrument = "";
   let IdNo = "";
