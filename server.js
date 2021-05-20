@@ -411,8 +411,8 @@ app.post("/addInstrumentDetails", upload, function(req, res) {
   uploadFile(
     instrument,
     IdNo,
+    serialNo,  
     modelNo,
-    serialNo,
     description,
     fileName,
     encode_file,
